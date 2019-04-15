@@ -1,0 +1,17 @@
+{% load static %}
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"> 
+<link rel="stylesheet" type="text/css" href="{% static 'questions/questions.css' %}">
+
+{% if questions %}
+    <div class="title">    
+        <a class="title_string">Perguntas de teste</a>
+    </div>    
+    <ul>
+    {% for question in questions %}
+        <li ><a class ="questions_text">{{ question.question_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
