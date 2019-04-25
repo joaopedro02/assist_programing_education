@@ -26,7 +26,7 @@ ___
 
 - Configure o mysql server
     - instale o mysql server distribuído pela oracle
-    - crie um database e um usuário com as seguintes configurações: 
+    - crie um database e um usuário com privilégios de administrador com as seguintes configurações: 
 
             - DATABASE NAME: educaton
             - USUARIO : testuser
