@@ -34,9 +34,9 @@ ___
             - HOST: localhost
             - PORT: 3306
 
-    - instale python 3.7
-    - instale Django 2.2
-    - Abra um terminal no diretório `\educaton` e rode os seguintes comandos:
-        - `py manage.py add_questions_answers_data` , para inicializar o banco de dados ( o mysql server precisa estar em execução).   
-        - `py manage.py runserver` , para iniciar um servidor para o website. Esse servidor só é indicado para testes.
-    - O website pode ser acessado pelo endereço dado pelo comando `py manage.py runserver` onde o servidor está sendo executado.
+- instale python 3.7
+- instale Django 2.2
+- Abra um terminal no diretório `\educaton` e rode os seguintes comandos:
+    - `py manage.py add_questions_answers_data` , para inicializar o banco de dados ( o mysql server precisa estar em execução).   
+    - `py manage.py runserver` , para iniciar um servidor para o website. Esse servidor só é indicado para testes.
+- O website pode ser acessado pelo endereço dado pelo comando `py manage.py runserver` onde o servidor está sendo executado.
