@@ -1,7 +1,7 @@
-# Educaton
+# __Educaton__
 Project to support programming classes. A website developed taking into account the theory of multiple intelligences.
-___
->__To run__
+
+## __To run__
 
  - Setup mysql server
     - Install mysql server from oracle.
@@ -22,7 +22,7 @@ ___
 - the website can be acessed by the adrees given by the `py manage.py runserver` command where the server is running.
 
 ___
->__Para Rodar__
+## __Para Rodar__
 
 - Configure o mysql server
     - instale o mysql server distribuído pela oracle
