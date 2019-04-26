@@ -94,7 +94,7 @@ class Command(BaseCommand):
         vet1 = [
             "Livros são muito importantes para mim.",
             "Gosto de ouvir as palavras na minha cabeça antes falar ou escrevêlas.",
-            "Aproveito mais ouvindo rádio ou ubooks do que vendo televisão ou filmes.,
+            "Aproveito mais ouvindo rádio ou ubooks do que vendo televisão ou filmes.",
             "Gosto de jogos que envolvam palavras, como por exemplo: palavras cruzadas, anagramas ou scrabble.",
             "Gosto de me divertir ou a outros com palavras difíceis de se pronunciar, rimas sem sentido ou palavras homônimas e homógrafas.",
             "Por vezes tenho que parar o que estou dizendo para repetir ou explicar o significado das palavras que falo ou que escrevo.",
