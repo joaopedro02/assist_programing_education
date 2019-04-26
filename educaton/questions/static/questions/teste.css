@@ -29,6 +29,11 @@ ul{
 
 
 .radiobuttons{
-    margin-left: 25px;
-    padding: 5px;
+    margin-left: 40px;
+    
+}
+
+.botaodesubmissao{
+    text-align:center;
+    padding: 10px;
 }
