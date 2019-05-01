@@ -20,6 +20,8 @@ git clone https://github.com/joaopedro02/educaton.git
 
 ```
 ### Install dependencies & activate virtualenv
+    
+- open a terminal in the destination folder and run these commands(the pip tool is needed):
 
 ```
 pip install pipenv
@@ -54,7 +56,7 @@ git clone https://github.com/joaopedro02/educaton.git
 
 ```
 ### Instale as dependências & ative o virtualenv
-
+- Abra um terminal na pasta de destino e rode esses comandos (a ferramenta pip é necessária) :
 ```
 pip install pipenv
 pipenv install
