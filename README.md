@@ -29,7 +29,7 @@ pipenv install
 pipenv shell
 ```
 ### Initialize the project
-- Open a terminal on the project folder  `\educaton` and run the following commands:
+- After `pipenv shell` open folder  `\educaton` and run the following commands:
     - `py manage.py migrate`
     - `py manage.py add_questions_answers_data` , to initialize the databank with data (mysql server must be running).   
     - `py manage.py runserver` , to start a server to acess the website. This server is only for test purposes.
@@ -63,7 +63,7 @@ pipenv install
 pipenv shell
 ```
 ### Inicialize o projeto
-- Abra um terminal no diretório `\educaton` e rode os seguintes comandos:
+- Depois de rodar `pipenv shell` abra o diretório `\educaton` e rode os seguintes comandos:
     - `py manage.py migrate`
     - `py manage.py add_questions_answers_data` , para inicializar o banco de dados ( o mysql server precisa estar em execução).   
     - `py manage.py runserver` , para iniciar um servidor para o website. Esse servidor só é indicado para testes.
