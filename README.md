@@ -49,7 +49,7 @@ ___
         - HOST: localhost
         - PORT: 3306
 
-### Clone the project
+### Clone o projeto
 
 ```
 git clone https://github.com/joaopedro02/educaton.git
