@@ -9,9 +9,9 @@
             <div class="col-8">
                 <h1 class="mt-4 text-center">Cadastrar</h1>
                 <hr class="mt-0 mb-4">
-        <form method="post" >
+        <form action="/accounts/cadastrar/" method="post" >
             {% csrf_token %}
-            {% include 'includes/form.html' with form=form %}
+            {% include 'includes/form_entrada_padrao.html' with form=form %}
             <button type="submit" class="btn btn-primary btn-block mt-4">Cadastrar</button>
         </form>
 
