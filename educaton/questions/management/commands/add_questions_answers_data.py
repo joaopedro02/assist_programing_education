@@ -7,7 +7,7 @@ class Command(BaseCommand):
     help="add data to app data bank"
     
     def handle(self,*args,**options):
-        
+        # questionario estilos de aprendizagem 
         vet = [
             "Tenho fama de dizer o que penso claramente e sem rodeios.",
             "A maior parte das vezes, sinto-me seguro(a) do que está correto e do que está incorreto.",
@@ -90,11 +90,11 @@ class Command(BaseCommand):
             "Com frequência tenho interesse em descobrir o que pensam as pessoas.",
             "Evito os assuntos subjetivos, ambíguos e pouco claros.",
         ]
-        
+        # questionario inteligencias multiplas
         vet1 = [
             "Livros são muito importantes para mim.",
             "Gosto de ouvir as palavras na minha cabeça antes falar ou escrevêlas.",
-            "Aproveito mais ouvindo rádio ou ubooks do que vendo televisão ou filmes.",
+            "Aproveito mais ouvindo rádio ou u-books do que vendo televisão ou filmes.",
             "Gosto de jogos que envolvam palavras, como por exemplo: palavras cruzadas, anagramas ou scrabble.",
             "Gosto de me divertir ou a outros com palavras difíceis de se pronunciar, rimas sem sentido ou palavras homônimas e homógrafas.",
             "Por vezes tenho que parar o que estou dizendo para repetir ou explicar o significado das palavras que falo ou que escrevo.",
@@ -175,21 +175,21 @@ class Command(BaseCommand):
         ]
        
 
-        for questao in vet:
-            q = Question(question_text = questao, form = 1)
+        for index,questao in enumerate(vet):
+            q = Question(question_text = questao, form = 1,number=index+1)
             q.save()
-            q.answers_set.create(answers_text="0",answers_value=0)
-            q.answers_set.create(answers_text="1",answers_value=1)
-            q.answers_set.create(answers_text="2",answers_value=2)
-            q.answers_set.create(answers_text="3",answers_value=3)
+            q.answers_set.create(answers_value=0)
+            q.answers_set.create(answers_value=1)
+            q.answers_set.create(answers_value=2)
+            q.answers_set.create(answers_value=3)
             
-        for questao in vet1:
-            q = Question(question_text = questao, form = 2)
+        for index,questao in enumerate(vet1):
+            q = Question(question_text = questao, form = 2,number=index+1)
             q.save()
-            q.answers_set.create(answers_text="0",answers_value=0)
-            q.answers_set.create(answers_text="1",answers_value=1)
-            q.answers_set.create(answers_text="2",answers_value=2)
-            q.answers_set.create(answers_text="3",answers_value=3)
+            q.answers_set.create(answers_value=0)
+            q.answers_set.create(answers_value=1)
+            q.answers_set.create(answers_value=2)
+            q.answers_set.create(answers_value=3)
             
        
         

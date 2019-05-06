@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+
+
+{% block navbar %} {% include 'pagina_do_usuario/login_nav_bar.html' %} {% endblock %}
+{% block content %}
+
+{% if countanswer1 < 80 or countanswer2 < 80 %}
+<div class="container-fluid  pt-lg-md">
+        <div class="row justify-content-center">
+          <div class="col-lg-5">
+            <div class="card bg-secondary shadow border-0">
+              <div class="card-header bg-primary pb-5">
+                <div class="text-muted text-center mb-3">
+                  <a class = "text-white">Você ainda não acabou de responder os questionário !!!!</a>
+                </div>
+                <div class="text-center">
+                  {% if countanswer2 < 80 %}
+                  <a href="/questions/form2/" class="btn btn-neutral btn-lg btn-block">
+                    <!-- <span class="btn-inner--icon">
+                      <img src="../assets/img/icons/common/github.svg">
+                    </span> -->
+                    <span class="btn-inner--text">Questionário de inteligências múltiplas</span>
+                  </a>
+                  {% endif %}
+                  {% if countanswer1 < 80 %}
+                  <a href="/questions/form1/" class="btn btn-neutral btn-lg btn-block">
+                    <!-- <span class="btn-inner--icon">
+                      <img src="../assets/img/icons/common/google.svg">
+                    </span> -->
+                    <span class="btn-inner--text">Questionário de estilos de aprendizagem</span>
+                  </a>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+{% endif %}
+{% endblock %}

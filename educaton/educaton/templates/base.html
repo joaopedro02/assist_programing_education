@@ -1,24 +1,39 @@
-<!doctype html>
-<html lang="pt-br">
-  <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-         <title>Django People</title>
-  </head>
-  <body>
-      {% include 'includes/nav_bar.html' with form=form %}
-      {% block content %}
-          <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-8">
-              <h1 class="mt-4 text-center">{% block title %}Django People {% endblock %}</h1>
-              <hr class="mt-0 mb-4">
-              
-              
-            </div>
-          </div>
-          </div>
-    {% endblock %}
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Hello World!</title>
+  {% load static %}
+  <!-- Favicon -->
+  <link  href="{% static 'argon-design-system-master/assets/img/brand/favicon.png' %}" rel="icon" type="image/png">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+  <!-- Icons -->
+  <link href="{% static 'argon-design-system-master/assets/vendor/nucleo/css/nucleo.css' %}" rel="stylesheet">
+  <link href="{% static 'argon-design-system-master/assets/vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+
+  <!-- Argon CSS -->
+  <link type="text/css" href="{% static 'argon-design-system-master/assets/css/argon.css' %}" rel="stylesheet">
+</head>
+<body>
+     {% block navbar %} {% include 'includes/nav_bar.html' %} {% endblock %}
+     {% block content %}
+          
+     {% endblock %}
+  <!-- Core -->
+  <script src="{% static 'argon-design-system-master/assets/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'argon-design-system-master/assets/vendor/popper/popper.min.js' %}"></script>
+  <script src="{% static 'argon-design-system-master/assets/vendor/bootstrap/bootstrap.min.js' %}"></script>
+
+  <!-- Optional plugins -->
+  <script src="{% static 'argon-design-system-master/assets/vendor/PLUGIN_FOLDER/PLUGIN_SCRIPT.js' %}"></script>
+
+  <!-- Theme JS -->
+  <script src="{% static 'argon-design-system-master/assets/js/argon.js' %}"></script>
   </body>
 </html>

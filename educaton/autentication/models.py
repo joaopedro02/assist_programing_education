@@ -22,5 +22,8 @@ class perfil(models.Model):
     ea_reflexivo=models.FloatField()
     ea_pragmatico=models.FloatField()
     ea_teorico=models.FloatField()
+
+    def __str__(self):
+        return self.user
     
     
