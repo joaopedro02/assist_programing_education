@@ -33,7 +33,6 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'paginas_apps.pagina_do_usuario',
     'paginas_apps.sobre',
-    'sass_processor',
     'paginas_apps.home',
     'autentication.apps.AutenticationConfig',
     'questions.apps.QuestionsConfig',
