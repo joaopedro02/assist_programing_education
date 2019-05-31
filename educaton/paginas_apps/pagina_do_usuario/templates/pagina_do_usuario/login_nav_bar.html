@@ -1,12 +1,14 @@
+<head>
+    {% load static %}
+    <link type="text/css" href="{% static 'questions/style5.css' %}" rel="stylesheet">  
+</head>
 <nav class="navbar navbar-expand-lg navbar-dark bg-default">
-        <button type="button" id="sidebarCollapse" class="navbar-btn">
+        <button type="button" id="sidebarCollapse" class="navbar-btn bg-default">
             <span></span>
             <span></span>
             <span></span>
         </button>
-        <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-align-justify"></i>
-        </button>
+        
         <div class="container">
             <a class="navbar-brand" href="">Educaton</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,59 +66,40 @@
             </div>
         </div>
     </nav>
-    <div class="wrapper">
+    <div class="wrapper stretch">
         <!-- Sidebar Holder -->
-        <nav id="sidebar">
-            <div class="sidebar-header">
-                <h3>Educaton</h3>
-            </div>
-
-            <ul class="list-unstyled components">
-                <li class="active">
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
-                    <ul class="collapse list-unstyled" id="homeSubmenu">
+        <nav class="navbar bg-default" id="sidebar">
+            <ul class="list-unstyled components bg-default">
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle bg-default">Turmas</a>
+                    <ul class="collapse list-unstyled bg-default" id="pageSubmenu">
                         <li>
-                            <a href="#">Home 1</a>
+                            <a href="#" class="bg-default">Turma 1</a>
                         </li>
                         <li>
-                            <a href="#">Home 2</a>
+                            <a href="#"class="bg-default">Turma 2</a>
                         </li>
                         <li>
-                            <a href="#">Home 3</a>
+                            <a href="#"class="bg-default">Turma 3</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#">About</a>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
-                        <li>
-                            <a href="#">Page 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 3</a>
-                        </li>
-                    </ul>
+                    <a href="#">Sobre</a>
+                    
                 </li>
                 <li>
-                    <a href="#">Portfolio</a>
+                    <a href="#">Estatísticas</a>
                 </li>
                 <li>
-                    <a href="#">Contact</a>
+                    <a href="#">Contato</a>
                 </li>
             </ul>
         </nav>
         
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <!-- Popper.JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-
+    
     <script type="text/javascript">
         $(document).ready(function () {
             $('#sidebarCollapse').on('click', function () {
