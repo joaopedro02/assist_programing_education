@@ -1,14 +1,4 @@
-<head>
-    {% load static %}
-    <link type="text/css" href="{% static 'questions/style5.css' %}" rel="stylesheet">  
-</head>
-<nav class="navbar navbar-expand-lg navbar-dark bg-default">
-        <button type="button" id="sidebarCollapse" class="navbar-btn bg-default">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        
+<nav class="navbar navbar-expand-lg navbar-dark bg-default">        
         <div class="container">
             <a class="navbar-brand" href="">Educaton</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
@@ -66,47 +56,7 @@
             </div>
         </div>
     </nav>
-    <div class="wrapper stretch">
-        <!-- Sidebar Holder -->
-        <nav class="navbar bg-default" id="sidebar">
-            <ul class="list-unstyled components bg-default">
-                <li>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle bg-default">Turmas</a>
-                    <ul class="collapse list-unstyled bg-default" id="pageSubmenu">
-                        <li>
-                            <a href="#" class="bg-default">Turma 1</a>
-                        </li>
-                        <li>
-                            <a href="#"class="bg-default">Turma 2</a>
-                        </li>
-                        <li>
-                            <a href="#"class="bg-default">Turma 3</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">Sobre</a>
-                    
-                </li>
-                <li>
-                    <a href="#">Estatísticas</a>
-                </li>
-                <li>
-                    <a href="#">Contato</a>
-                </li>
-            </ul>
-        </nav>
-        
-    <!-- jQuery CDN - Slim version (=without AJAX) -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').toggleClass('active');
-                $(this).toggleClass('active');
-            });
-        });
-    </script>
+    
     
     

@@ -19,10 +19,11 @@
 
   <!-- Argon CSS -->
   <link type="text/css" href="{% static 'argon-design-system-master/assets/css/argon.css' %}" rel="stylesheet">
-  <link type="text/css" href="{% static 'questions/style5.css' %}" rel="stylesheet">
+  <link type="text/css" href="{% static 'questions/menu.css' %}" rel="stylesheet"> 
 </head>
 <body>
      {% block navbar %} {% include 'includes/nav_bar.html' %} {% endblock %}
+     {% block menu %} {% endblock %}
      {% block content %}
           
      {% endblock %}

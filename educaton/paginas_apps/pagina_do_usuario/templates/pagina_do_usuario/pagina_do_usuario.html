@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 {% load widget_tweaks %}
 
-
 {% block navbar %} {% include 'pagina_do_usuario/login_nav_bar.html' %} {% endblock %}
+{% block menu %} {% include 'pagina_do_usuario/menu.html' %} {% endblock %}
 {% block content %}
 
 {% if countanswer1 < 80 or countanswer2 < 80 %}
@@ -12,7 +12,7 @@
             <div class="card bg-secondary shadow border-0">
               <div class="card-header bg-primary pb-5">
                 <div class="text-muted text-center mb-3">
-                  <a class = "text-white">Você ainda não acabou de responder os questionário !!!!</a>
+                  <a class = "text-white">Você ainda não acabou de responder os questionários !!!!</a>
                 </div>
                 <div class="text-center">
                   {% if countanswer2 < 80 %}
