@@ -1,9 +1,12 @@
 {% extends 'base.html' %}
 {% load widget_tweaks %}
+{% load static %}
 
+<!-- <link rel="stylesheet" type="text/css" href="{% static 'sidebar.css' %}"> -->
 
 {% block navbar %} {% include 'pagina_do_usuario/login_nav_bar.html' %} {% endblock %}
 {% block content %}
+
 
 {% if countanswer1 < 80 or countanswer2 < 80 %}
 <div class="container-fluid  pt-lg-md">
@@ -38,18 +41,20 @@
         </div>
       </div>
 {% endif %}
+{% if countanswer2 >= 80 %}
 <div class="container mt-4"> 
   <div  class="text-center">
     {{ grafico_int|safe }}
   </div>
 </div>
-
+{% endif %}
+{% if countanswer1 >= 80 %}
 <div class="container mt-4"> 
   <div  class="text-center">
     {{ grafico_estilos|safe }}
   </div>
 </div>
-
+{% endif %}
 
 <script type="text/javascript" src="http://kozea.github.com/pygal.js/latest/pygal-tooltips.min.js"></script>
 {% endblock %}
