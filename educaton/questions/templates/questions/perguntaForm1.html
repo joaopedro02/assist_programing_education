@@ -40,30 +40,47 @@
               </div>
             </div>
     <div class="container">
+      <div class="card text-center">
+        <div class="card-body">
       {% if questions %}
-          <div class="title">    
+          <div class="card-title">    
               <a class="title_string">Questionário</a>
           </div>    
           <ul>
           <form action="{% url 'questions:resposta' %}" method="post">
           {% csrf_token %}   
-          
+          <div class="container-fluid">
               {% for question in questions %}
+              <div class="row" >
                 <input type="hidden" value="{{question.form}}" id="id" name="questionform" >
                   <li class="question"><a class ="questions_text">{{ question.question_text }}</a></li>
-                  <div class="slider_container">
-                      <input type="hidden" value="{{question.id}}" id="id{{ forloop.counter }}" name="questionid{{ forloop.counter }}" >
-                  <input  class="slider" id="slider{{ forloop.counter }}" name="slider{{ forloop.counter }}" type="range" value="0" min="0" max="3" step="1" />
+              </div>
+              <div class="row mt-3 mb-5"> 
+                  <div class="col ">
+                      <p class="text-right">Nunca se aplica a mim.</p>
+                  </div> 
+                  <div class="col-6">
+                    <div class="slider_container">
+                        <input type="hidden" value="{{question.id}}" id="id{{ forloop.counter }}" name="questionid{{ forloop.counter }}" >
+                        <label for="happy" class="pull-left"></label>
+                        <label for="" class="pull-right"> </label>
+                        <input  class="slider" id="slider{{ forloop.counter }}" name="slider{{ forloop.counter }}" type="range" value="0" min="0" max="3" step="1" />
+                    </div>
                   </div>
-
+                  <div class="col ">
+                      <p class="text-left">Aplica-se muito a mim.</p>
+                  </div>
+              </div>
               {% endfor %}
-
+            </div>
           <input class="btn btn-primary btn-block mt-4 mb-5" type="submit" value="Submeter respostas">
           </form>    
           </ul>
       {% else %}
           <p>Você terminou o questionário</p>
       {% endif %}
+    </div>
+  </div>
     </div>
 <!-- Core -->
 <script src="{% static 'argon-design-system-master/assets/vendor/jquery/jquery.min.js' %}"></script>
