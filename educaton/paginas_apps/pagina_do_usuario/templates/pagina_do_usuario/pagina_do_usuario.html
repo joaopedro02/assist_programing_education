@@ -2,9 +2,8 @@
 {% load widget_tweaks %}
 {% load static %}
 
-<!-- <link rel="stylesheet" type="text/css" href="{% static 'sidebar.css' %}"> -->
-
 {% block navbar %} {% include 'pagina_do_usuario/login_nav_bar.html' %} {% endblock %}
+{% block menu %} {% include 'pagina_do_usuario/menu.html' %} {% endblock %}
 {% block content %}
 
 
@@ -15,7 +14,7 @@
             <div class="card bg-secondary shadow border-0">
               <div class="card-header bg-primary pb-5">
                 <div class="text-muted text-center mb-3">
-                  <a class = "text-white">Você ainda não acabou de responder os questionário !!!!</a>
+                  <a class = "text-white">Você ainda não acabou de responder os questionários !!!!</a>
                 </div>
                 <div class="text-center">
                   {% if countanswer2 < 80 %}

@@ -1,0 +1,21 @@
+{% load static %}
+<link type="text/css" href="{% static 'questions/menu.css' %}?v43?" rel="stylesheet">
+
+<div class="d-flex" id="wrapper">
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="list-group list-group-flush">
+        <a id="lista" href="#turmaSubmenu" class="list-group-item list-group-item-action bg-light dropdown-toggle" aria-expanded="false" data-toggle = "collapse" >Turmas</a>
+            <ul class="collapse list-unstyled" id="turmaSubmenu">
+                <li>
+                    <a class="list-group-item list-group-item-action bg-light" href="#">Turma 1</a>
+                </li>
+                <li>
+                    <a class="list-group-item list-group-item-action bg-light" href="#">Turma 2</a>
+                </li>
+                <li>
+                    <a class="list-group-item list-group-item-action bg-light" href="#">Turma 3</a>
+                </li>
+            </ul>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Sobre</a>
+      </div>
+    </div>
