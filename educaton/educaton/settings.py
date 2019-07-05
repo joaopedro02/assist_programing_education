@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'paginas_apps.pagina_do_usuario',
+    'paginas_apps.paginas_turmas',
     'paginas_apps.sobre',
     'paginas_apps.home',
     'autentication.apps.AutenticationConfig',

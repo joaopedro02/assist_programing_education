@@ -15,12 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include,path
-
+from . import views
+app_name='paginas_turmas'
 urlpatterns = [
-    path('sobre/', include('paginas_apps.sobre.urls')),
-    path('', include('paginas_apps.home.urls')),
-    path('accounts/', include('autentication.urls')),
-    path('questions/',include('questions.urls')),
-    path('admin/', admin.site.urls),
-    path('turmas/',include('paginas_apps.paginas_turmas.urls')),
+    path('',views.pagina_inicial.as_view(),name='pagina_inicial_turmas'),
+    path('<int:turma_id>/',views.turma.as_view(),name='pagina_turma_especifica'),
+    path('adicionar/',views.addturma,name='add_turma'),
+    path('criar/', views.cria_turma.as_view(),name='cria_turma'),
 ]

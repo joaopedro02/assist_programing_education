@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+{% load static %}
+
+{% block navbar %} {% include 'pagina_do_usuario/login_nav_bar.html' %} {% endblock %}
+{% block menu %} {% include 'pagina_do_usuario/menu.html' %} {% endblock %}
+
+{% block content %}
+
+<div class= "container-fluid">
+    <div class="row justify-content-left"> 
+            <div class="card border-primary m-3" >
+                            <div class="card-body">
+                            <h5 class="card-text">{{t.first_name}} {{t.last_name}}</h5>
+                            </div>
+                    </a>
+            </div>
+    </div>
+
+    <div class="row justify-content-center">
+        
+        {% if countanswer2 >= 80 %}
+            <div class="text-center m-2"> 
+                {{ grafico_int|safe }}
+            </div>
+        {% endif %}
+        
+        {% if countanswer1 >= 80 %}
+            <div class="text-center m-2"> 
+                {{ grafico_estilos|safe }}
+            </div>
+        {% endif %}
+    </div>
+
+</div>
+<script type="text/javascript" src="http://kozea.github.com/pygal.js/latest/pygal-tooltips.min.js"></script>
+{% endblock %}

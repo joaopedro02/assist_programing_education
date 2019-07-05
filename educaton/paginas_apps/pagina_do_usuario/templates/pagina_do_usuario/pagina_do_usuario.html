@@ -4,6 +4,7 @@
 
 {% block navbar %} {% include 'pagina_do_usuario/login_nav_bar.html' %} {% endblock %}
 {% block menu %} {% include 'pagina_do_usuario/menu.html' %} {% endblock %}
+
 {% block content %}
 
 <div class= "container">
@@ -40,36 +41,182 @@
         </div>
       </div>
 {% endif %}
-<div class="row justify-content-center">
-    <div class="col-md">
-    {% if countanswer2 >= 80 %}
+<div class="row justify-content-center mt-3">
+    {% if countanswer2 >= 80 %}  
+  
+    
     <div class="container-fluid mt-4"> 
       <div  class="text-center">
         {{ grafico_int|safe }}
       </div>
     </div>
-    {% endif %}
-    </div>
-    <div class="col-md">
+    
+    
+    <div class="card-deck mb-4">
         <div class="card border-info mt-4">
             <div class="card-body">
               <h5 class="card-title">Inteligências múltiplas</h5>
-              <p class="card-text">A teoria de inteligências múltiplas vem sendo desenvolvida desde 1980. Um dos principais nomes nesse campo é o psicólogo Howard Gardner, pesquisador na universidade de Harvard. </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <p class="card-text">A teoria de inteligências múltiplas vem sendo desenvolvida desde 1980. Um dos principais nomes nesse campo é o psicólogo Howard Gardner, pesquisador na universidade de Harvard. Os níves de cada inteligência dependem dos estimulos e esperiências pelos quais o indivíduo passou ao longo de sua vida e não são fixos podendo variar com o passar do tempo.  </p>
+            </div>
+          </div>
+    </div>
+    
+
+     <div class="card-deck mb-6">
+        <div class="card border-info mt-4">
+            <div class="card-body">
+              <h5 class="card-title">Inteligênca verbal linguística</h5>
+              <p class="card-text"> Corresponde a capacidade de processar rapidamente mensagens linguísticas, de ordenar palavras e de dar sentido lúcido às mensagens. </p>
             </div>
           </div>
 
-    </div>
+    
 
+    
+        <div class="card border-info mt-4">
+            <div class="card-body">
+              <h5 class="card-title">Inteligência musical</h5>
+              <p class="card-text">Corresponde a facilidade para identificar sons diferentes, perceber nuanças em sua
+
+                  intensidade e direção. Reconhece sons naturais e, na música percebe a distinção entre
+                  
+                  tom, melodia, ritmo, timbre e frequência. Isola sons em agrupamentos musicais. </p>
+            </div>
+          </div>
+
+    
+
+    
+        <div class="card border-info mt-4">
+            <div class="card-body">
+              <h5 class="card-title">Inteligência lógico matemática</h5>
+              <p class="card-text">Corresponde a facilidade para o cálculo e percepção da geometria espacial. Prazer específico
+
+                  em resolver problemas com palavras cruzadas, charadas ou lógica, como tangran, jogos
+                  
+                  de gamão e xadrez. </p>
+            </div>
+          </div>
+
+    
+
+    
+        <div class="card border-info mt-4">
+            <div class="card-body">
+              <h5 class="card-title">Inteligência cinestésico corporal</h5>
+              <p class="card-text">Corresponde a capacidade de trabalhar habilmente com objetos, tanto os que envolvem a
+
+                  motricidade dos dedos, quanto os que exploram o uso integral do corpo. </p>
+            </div>
+          </div>
+     </div>
+    
+
+      <div class="card-deck">
+        <div class="card border-info mt-4">
+            <div class="card-body">
+              <h5 class="card-title">Inteligência espacial visual</h5>
+              <p class="card-text">Corresponde a capacidade de perceber formas e objetos mesmo quando apresentados em
+
+                  ângulos não usuais com precisão, de efetuar transformações sobre as percepções, de
+                  
+                  imaginar movimento ou deslocamento interno entre as partes de uma configuração, de
+                  
+                  recriar aspectos da experiência visual e de perceber as direções no espaço concreto e
+                  
+                  abstrato. </p>
+            </div>
+          </div>
+
+    
+
+    
+        <div class="card border-info mt-4">
+            <div class="card-body">
+              <h5 class="card-title">Inteligência intrapessoal</h5>
+              <p class="card-text">Corresponde a capacidade de autoestima, automotivação, de formação de um modelo coerente e verídico de si mesmo e do uso desse modelo para operacionalizar a construção da felicidade pessoal e social. </p>
+            </div>
+          </div>
+
+    
+
+    
+        <div class="card border-info mt-4">
+            <div class="card-body">
+              <h5 class="card-title">Inteligência naturalista</h5>
+              <p class="card-text">Corresponde a atração pelo mundo natural e sensibilidade em relação a ele, capacidade de
+
+                  identificação da linguagem natural a capacidade de êxtase diante da paisagem
+                  
+                  humanizada. </p>
+            </div>
+          </div>
+
+    
+
+   
+        <div class="card border-info justify-content-left mt-4">
+            <div class="card-body">
+              <h5 class="card-title">Inteligência interpessoal</h5>
+              <p class="card-text">Corresponde a capacidade de perceber e compreender outras pessoas, descobrir as forças que as motivam e sentir grande empatia pelo outro indistinto. </p>
+            </div>
+          </div>
+        </div>
+        {% endif %}
 </div>
 
-<div class="row justify-content-center">
+<div class="row justify-content-center mt-5">
 {% if countanswer1 >= 80 %}
 <div class="container mt-4"> 
   <div  class="text-center">
     {{ grafico_estilos|safe }}
   </div>
 </div>
+
+<div class="card-deck mb-4">
+<div class="card border-info mt-4">
+    <div class="card-body">
+      <h5 class="card-title">Estilos de aprendizagem</h5>
+      <p class="card-text"> As pessoas são diferentes e portanto aprendem de formas diferente, de acordo com Alonso, Gallego e Honey existem quatro estilos predominantes de aprendizado, são eles o ativo, o reflexivo, o teórico e o pragmático. </p>
+    </div>
+  </div>
+
+</div>
+
+<div class="card-deck mb-5">
+
+    <div class="card border-info mt-4">
+        <div class="card-body">
+          <h5 class="card-title">Estilo ativo</h5>
+          <p class="card-text"> Valoriza dados da experiência, entusiasma-se com tarefas novas e é muito ágil; é quase impossível não perceber a sua presença; quando está em grupo, sempre está fazendo alguma coisa e, em geral são pessoas intempestivas. A rotina dos ativos é repleta de múltiplas atividades. Quando estão perdendo o prazer por uma certa atividade, são empolgados a procurar outras que lhes proporcionem satisfação ou prazer. São pessoas participativas, inovadoras e que gostam de aprender e solucionar problemas. </p>
+        </div>
+      </div>
+
+      <div class="card border-info mt-4">
+          <div class="card-body">
+            <h5 class="card-title">Estilo reflexivo</h5>
+            <p class="card-text"> Utiliza a observação, estuda, reflete e analisa antes de chegar a uma conclusão. Pessoas desse estilo, preferem escutar mais para depois agir, são mais ponderadas que as do estilo ativo. Gostam de observar pessoas agindo. Escutam atentamente outras pessoas e compreendem o que está sendo discutido antes de se pronunciar. Elas coletam dados, tanto de experiências próprias quanto de experiências de terceiros, e refletem sobre eles, antes de chegar a uma conclusão. </p>
+          </div>
+        </div>
+
+        <div class="card border-info mt-4">
+            <div class="card-body">
+              <h5 class="card-title">Estilo pragmático</h5>
+              <p class="card-text"> Tende a colocar em prática as ideias, faz experimentos; tem como objetivo a funcionalidade. São pessoas que ao aprenderem uma nova teoria, têm inúmeras ideias e não veem a hora de implementá-las. Diferentemente do estilo teórico ou reflexivo, são pessoas impacientes para discussões longas e sem conclusões, pois gostam de solucionar problemas e aplicar o que aprenderam. </p>
+            </div>
+          </div>
+
+        <div class="card border-info mt-4">
+            <div class="card-body">
+              <h5 class="card-title">Estilo teórico</h5>
+              <p class="card-text"> É lógico, estabelece teorias, princípios, modelos, busca a racionalidade, a objetividade e a lógica. Deste estilo são os que buscam o sentido das coisas e como elas se relacionam, ou seja, abordam problemas sempre de forma lógica. Pessoas desse grupo
+
+                  tendem a ser disciplinadas, perfeccionistas. Não trabalham sem planejamento e cronograma. </p>
+            </div>
+          </div>
+
+</div>
+
 {% endif %}
 </div>
 

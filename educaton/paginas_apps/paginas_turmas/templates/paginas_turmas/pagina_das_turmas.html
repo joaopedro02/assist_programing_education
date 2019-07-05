@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+{% load static %}
+
+{% block navbar %} {% include 'pagina_do_usuario/login_nav_bar.html' %} {% endblock %}
+{% block menu %} {% include 'pagina_do_usuario/menu.html' %} {% endblock %}
+
+{% block content %}
+<div class= "container-fluid text-center m-2 ">
+<div class=" p-3 text-left">
+
+                {% if form_error %}
+                <div class="alert alert-danger" role="alert">
+                        Essa turma não existe !!
+                </div>
+                {% endif %}
+                <div class="container-fluid">
+                                <button type="button" class="btn btn-block btn-success ml-3 mb-3" data-toggle="modal" data-target="#exampleModal">
+                                                +
+                                              </button>
+                </div>
+                {% if turmasm %}
+                <!-- <div class="row"> -->
+                <div class="text-left mt-4">
+                        <h5>Turmas criadas por mim:</h5>
+                </div>
+                <!-- </div> -->
+                {% endif %}
+                <!-- <div class="row"> -->
+                        <div class="card-deck justify-content-left mt-3">
+                                
+                                <!-- <a href="#" class="btn btn-success ml-3 mb-3">+</a> -->
+                                
+                        
+                                {% if turmasm %}
+                                        {% for t in turmasm %}
+                                        <div class="card border-primary mb-3" style="max-width: 18rem;">
+                                                <a href="/turmas/{{ t.id }}/">
+                                                        <div class="card-header bg-primary"></div>
+                                                        <div class="card-body">
+                                                        <h5 class="card-title">{{t.nome}}</h5>
+                                                        <p class="card-text">{{t.descricao}}</p>
+                                                        </div>
+                                                </a>
+                                        </div>
+                                        {% endfor %}
+                                {% endif %}
+                                
+                        </div>
+        <!-- </div> -->
+        {% if turmas %}
+        <!-- <div class="row mt-4"> -->
+                <div class="text-left mt-4">
+                        <h5>Turmas em que participo:</h5>
+                </div>
+        <!-- </div> -->
+        {% endif %}
+        <!-- <div class="row"> -->
+                        <div class="card-deck justify-content-left mt-3">
+                                
+                                <!-- <a href="#" class="btn btn-success ml-3 mb-3">+</a> -->
+                                
+                                {% if turmas %}
+                                        {% for t in turmas %}
+                                        <div class="card border-primary mb-3" style="max-width: 18rem;">
+                                                <a href="/turmas/{{ t.id }}/">
+                                                        <div class="card-header bg-primary"></div>
+                                                        <div class="card-body">
+                                                        <h5 class="card-title">{{t.nome}}</h5>
+                                                        <p class="card-text">{{t.descricao}}</p>
+                                                        </div>
+                                                </a>
+                                        </div>
+                                        {% endfor %}
+                                {% endif %}
+                        </div>
+         <!-- </div> -->
+</div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Criar ou participar da turma</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form action="/turmas/" method="post">
+                        {% csrf_token %}
+                        {% include 'includes/form_entrada_padrao.html' with form=form %}
+                        <button type="submit" class="btn btn-primary">Participar da turma</button>
+                      </form>
+                      
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                      <form action="/turmas/criar/" method="get">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-primary">Criar nova turma</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+<script type="text/javascript" src="http://kozea.github.com/pygal.js/latest/pygal-tooltips.min.js"></script>
+{% endblock %}

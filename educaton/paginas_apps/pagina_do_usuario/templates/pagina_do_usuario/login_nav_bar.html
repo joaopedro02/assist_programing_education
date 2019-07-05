@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-default">        
         <div class="container">
-            <a class="navbar-brand" href="">Educaton</a>
+            <a class="navbar-brand" href="/accounts/profile/">Educaton</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -8,7 +8,7 @@
                 <div class="navbar-collapse-header">
                     <div class="row">
                         <div class="col-6 collapse-brand">
-                            <a href="">Educaton</a>
+                            <a href="/accounts/profile/">Educaton</a>
                             <!-- <a href="index.html">
                                 <img src="assets/img/brand/blue.png">
                             </a> -->
@@ -45,10 +45,10 @@
                             <span class="nav-link-inner--text d-lg-none">Settings</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbar-default_dropdown_1">
-                            <a class="dropdown-item" href="#"> <i class="ni ni-single-02"></i>{{ user.email }}</a>
-                            <a class="dropdown-item" href="{% url  'autentication:logout' %}"><i class="ni ni-bold-left"></i> Sair</a>
+                            <a class="dropdown-item" href="/accounts/profile/"> <i class="ni ni-single-02"></i>{{ user.email }}</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Conta</a>
+                            <a class="dropdown-item" href="{% url  'autentication:logout' %}"><i class="ni ni-bold-left"></i> Sair</a>
+                            <!-- <a class="dropdown-item" href="#">Conta</a> -->
                         </div>
                     </li>
                 </ul>

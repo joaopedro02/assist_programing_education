@@ -22,25 +22,25 @@
   <link type="text/css" href="{% static 'questions/slider.css' %}" rel="stylesheet">
 
 </head>
-<body>
+<body  style="background-color:#ecf1f8;">
         <!-- {% include 'questions/slider.html' %} -->
-        <div class="container">
-        <div class="progress-wrapper">
+        <div class="container-fluid pb-1 mb-3" >
+              <div class="progress-wrapper">
                 <div class="progress-info">
-                  <div class="progress-label">
-                    <span>Parte do quetionário respondido</span>
+                  <div class="progress-label" >
+                    <span >Parte do quetionário respondido</span>
                   </div>
                   <div class="progress-percentage">
-                    <span>{{ valor_completada }}%</span>
+                    <span >{{ valor_completada }}%</span>
                   </div>
                 </div>
                 <div class="progress">
                   <div class="progress-bar bg-success" role="progressbar" aria-valuenow="{{ valor_completada }}" aria-valuemin="0" aria-valuemax="100" style= "{{ porcentagem_completada }}"></div>
                 </div>
               </div>
-            </div>
+        </div>
     <div class="container">
-      <div class="card text-center">
+      <div class="card text-center mb-5" >
         <div class="card-body">
       {% if questions %}
           <div class="card-title">    
@@ -73,7 +73,7 @@
               </div>
               {% endfor %}
             </div>
-          <input class="btn btn-primary btn-block mt-4 mb-5" type="submit" value="Submeter respostas">
+          <input class="btn btn-primary btn-block mt-4 mb-3" type="submit" value="Submeter respostas">
           </form>    
           </ul>
       {% else %}

@@ -174,11 +174,12 @@ def calculo_inteligencias_multiplas(request,answers):
     request.user.perfil.int_intrapessoal=intra
     request.user.perfil.int_naturalista=n
     request.user.perfil.int_interpessoal=i
+    request.user.perfil.f_int=True
     request.user.perfil.save()
 
 @login_required
 def calculo_estilos_de_aprendizagem(request,answers):
-    #precisa fazer melhor mas eu estava sem pacienciencia
+    #da pra fazer melhor
     #precisa ordena as perguntas na entrada do banco pra gente so ter que fazer querys em intervalos
     # e nao precisar fazer 80 querys
     ativo=[3,5,7,9,13,20,26,27,35,37,41,43,46,48,51,61,67,74,75,77]
@@ -213,5 +214,6 @@ def calculo_estilos_de_aprendizagem(request,answers):
     request.user.perfil.ea_reflexivo=re
     request.user.perfil.ea_pragmatico=pr
     request.user.perfil.ea_teorico=te
+    request.user.perfil.f_est=True
     request.user.perfil.save()
     pass

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+{% load static %}
+
+{% block navbar %} {% include 'pagina_do_usuario/login_nav_bar.html' %} {% endblock %}
+{% block menu %} {% include 'pagina_do_usuario/menu.html' %} {% endblock %}
+
+{% block content %}
+
+<div class= "container-fluid  ">
+        <div class="row justify-content-center">
+            <div class="col-8">
+                    <h4 class="mt-4 text-left">Criar turma</h4>
+                    <hr class="mt-0 mb-4">
+                    <form action="/turmas/criar/" method="post" >
+                        {% csrf_token %}
+                        {% include 'includes/form_entrada_padrao.html' with form=form %}
+                        <button type="submit" class="btn btn-primary btn-block mt-4 mb-5">Criar</button>
+                    </form>
+    
+            </div>
+        </div>
+</div>
+
+<!-- Modal -->
+
+<script type="text/javascript" src="http://kozea.github.com/pygal.js/latest/pygal-tooltips.min.js"></script>
+{% endblock %}

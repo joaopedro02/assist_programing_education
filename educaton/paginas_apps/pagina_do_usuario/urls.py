@@ -19,5 +19,6 @@ from . import views
 app_name='pagina_do_usuario'
 urlpatterns = [
     path('',views.pagina_inicial.as_view(),name='pagina_inicial'),
-   
+    path('<int:id_usuario>/',views.pagina_usuario_externa.as_view(),name='pagina_usuario_externa'),
+
 ]

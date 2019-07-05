@@ -2,11 +2,6 @@ from django.conf import settings
 from django.db import models
 from django.contrib.auth.models import User
 
-class Turmas(models.Model):
-    nome=models.CharField(max_length=100)
-    alunos=models.ManyToManyField(User,related_name='turmas_onde_sou_aluno')
-    professores=models.ManyToManyField(User,related_name='turmas_onde_sou_professor')
-
 
 class perfil(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -22,6 +17,8 @@ class perfil(models.Model):
     ea_reflexivo=models.FloatField()
     ea_pragmatico=models.FloatField()
     ea_teorico=models.FloatField()
+    f_int=models.BooleanField(default=False)
+    f_est=models.BooleanField(default=False)
 
     def __str__(self):
         return self.user
