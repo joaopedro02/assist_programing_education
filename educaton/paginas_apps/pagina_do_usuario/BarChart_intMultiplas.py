@@ -8,7 +8,7 @@ class BarChart():
         self.chart = pygal.Bar(**kwargs)
         
     def set_title(self):
-        self.chart.title = 'Inteligências multiplas'
+        self.chart.title = 'Resultado inteligências multiplas'
 
     def get_data(self, request):
         '''

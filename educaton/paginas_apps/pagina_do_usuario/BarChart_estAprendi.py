@@ -8,7 +8,7 @@ class BarChart_estAprendizagem():
         self.chart = pygal.Bar(**kwargs)
         
     def set_title(self):
-        self.chart.title = 'Estilos de aprendizagem'
+        self.chart.title = 'Resultado estilos de aprendizagem'
 
     def get_data(self, request):
         '''

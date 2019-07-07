@@ -7,11 +7,16 @@
 
 {% block content %}
 
-<div class= "container-fluid  ">
-        <div class="row justify-content-left m-2">
+<div class= "container pt-lg-md ">
+        <div class="row  ">
+               <div class="col ml-2">
                 <h5>{{turma.nome}}</h5>
+               </div>
+               <div class="col text-right">
+                <h5>Código da turma: {{turma.id}}</h5>     
+               </div>
         </div>
-        <div class="row justify-content-left ml-2">
+        <div class="row justify-content-left ml-2 mb-4">
                 <h6>{{turma.descricao}}</h6>
         </div>   
         <div class="row justify-content-center">
@@ -29,8 +34,8 @@
          <div class="row justify-content-left m-2 mt-5" >
                 <h5>Integrantes da turma:</h5>
          </div>
-         <div class="row justify-content-center">
-            <div class="card-deck justify-content-left mt-3">
+         <div class="row justify-content-left ml-2">
+            <div class="card-deck mt-3">
                             
                     <!-- <a href="#" class="btn btn-success ml-3 mb-3">+</a> -->
                 

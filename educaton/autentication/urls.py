@@ -12,4 +12,5 @@ urlpatterns = [
     path('logout/',views.logout_view ,name='logout'),
     path('cadastrar/', views.Cadastro.as_view(),name='cadastrar'),
     path('profile/',include('paginas_apps.pagina_do_usuario.urls')),
+    path('termos/',views.Termo.as_view(),name='termos_de_uso'),
 ]

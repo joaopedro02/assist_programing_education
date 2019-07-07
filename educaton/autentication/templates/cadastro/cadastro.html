@@ -12,6 +12,7 @@
         <form action="/accounts/cadastrar/" method="post" >
             {% csrf_token %}
             {% include 'includes/form_entrada_padrao.html' with form=form %}
+            <div> <a href="/accounts/termos/">Termos de uso</a></div>
             <button type="submit" class="btn btn-primary btn-block mt-4 mb-5">Cadastrar</button>
         </form>
 
