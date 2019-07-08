@@ -20,12 +20,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'uw&z0u9_el#ti*#0xsbtw6byxu7*9%3=@n2s_kav)a%w+7vk85'
+SECRET_KEY = 'na!p)^aqcad_ubk=v%r@1%w%njna5f4@jq0+54s$^qqx&p2exm'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['172.20.22.40']
 
 
 # Application definition
@@ -86,7 +86,7 @@ DATABASES = {
     'default': {
        'ENGINE': 'django.db.backends.mysql', 
         'NAME': 'educaton',
-        'USER': 'testuser',
+        'USER': 'educaton',
         'PASSWORD': '01020304050607',
         'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
         'PORT': '3306',
@@ -131,4 +131,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT= "/var/www/example.com/static/"
+STATIC_ROOT= os.path.join(BASE_DIR, 'static/')
