@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ul{
     list-style: none;
     margin: 0;
@@ -32,3 +33,39 @@ ul{
     margin-left: 25px;
     padding: 5px;
 }
+=======
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.question {
+    background-color: #bdd9e6be;
+    padding: 20px;
+    margin: 20px;
+}
+
+.questions_text{
+    color: #35312c;
+    
+    margin-top: 40px;
+    padding: 10px;
+}
+.title{
+    background-color: #3f0dcabe;
+    
+    
+    margin-top: 20px;
+    padding: 20px;
+}
+.title_string{
+    color: #ffffff;
+}
+
+
+.radiobuttons{
+    margin-left: 25px;
+    padding: 5px;
+}
+>>>>>>> 24d15321544281018125d1dc96b16cf120808b56
