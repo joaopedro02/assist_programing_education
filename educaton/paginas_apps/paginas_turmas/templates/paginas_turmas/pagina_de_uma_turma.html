@@ -19,6 +19,7 @@
         <div class="row justify-content-left ml-2 mb-4">
                 <h6>{{turma.descricao}}</h6>
         </div>   
+        
         <div class="row justify-content-center">
                 <div class="col">
                     <div  class=" text-center m-1">
@@ -31,30 +32,61 @@
                      </div>
                 </div>
          </div>
+         {% if mestre %}
+         <div class="row mt-4 ">
+                  <h5>Recomendações </h5>
+          </div>
+         <div class="row justify-content-left ml-2 mt-2">
+                
+                        <h6>Recomendações de práticas de ensino para os diferentes estilos de aprendizagem: </h6>      
+                
+        
+        </div>
+        <div class="row justify-content-left ml-5 mb-0"> <h6>Ativo</h6><a href="{% static "images/ATIVO.png" %}" target="_blank" rel="noopener noreferrer"><i class="material-icons" style="font-size:24px;" >subject</i></a></div>
+        <div class="row justify-content-left ml-5 mb-0">  <h6>Reflexivo</h6><a href="{% static "images/REFLEXIVO.png" %}" target="_blank" rel="noopener noreferrer"><i class="material-icons" style="font-size:24px;" >subject</i></a></div>
+        <div class="row justify-content-left ml-5 mb-0">  <h6>Pragmático </h6><a href="{% static "images/PRAGMATICO.png" %}" target="_blank" rel="noopener noreferrer"><i class="material-icons" style="font-size:24px;" >subject</i></a></div>
+        <div class="row justify-content-left ml-5 mb-0">  <h6>Teórico </h6><a href="{% static "images/TEORICO.png" %}" target="_blank" rel="noopener noreferrer"><i class="material-icons" style="font-size:24px;" >subject</i></a></div>
+        
+        <div class="row justify-content-left ml-2 mt-2"> <h6>Ferramentas recomendadas:</h6><a href="{% static "pdf/ferramentasrec.pdf" %}" target="_blank" rel="noopener noreferrer"><i class="material-icons" style="font-size:24px;" >subject</i></a></div>
+        
+        <div class="row justify-content-left ml-2 mt-2">
+                      
+                <h6>Recomendações de leitura: </h6>      
+                      
+              
+        </div>
+        <div class="row justify-content-left ml-5 mb-0"> <h6>Viagem à escola do século XXI</h6><a href="{% static "pdf/viagem_escola.pdf" %}" target="_blank" rel="noopener noreferrer"><i class="material-icons" style="font-size:24px;" >subject</i></a></div>
+        
+        {% endif %}
          <div class="row justify-content-left m-2 mt-5" >
                 <h5>Integrantes da turma:</h5>
          </div>
-         <div class="row justify-content-left ml-2">
-            <div class="card-deck mt-3">
-                            
+        
+            
+                   <div class="container">
+
                     <!-- <a href="#" class="btn btn-success ml-3 mb-3">+</a> -->
                 
                     {% if alunos %}
                         {% for t in alunos %}
-                        <div class="card border-primary m-3" style="max-width: 20rem;">
+                        <div class="row">
+                                        <div class="col ">
+                        <div class="card border-primary m-0" >
                                 {% if mestre %}
-                                <a href="/accounts/profile/{{ t.id }}/">
+                                <!-- <a href="/accounts/profile/{{ t.id }}/"> -->
                                 {% endif %}
                                         <div class="card-body">
                                         <h5 class="card-text">{{t.first_name}} {{t.last_name}}</h5>
                                         </div>
-                                </a>
+                                <!-- </a> -->
+                        </div>
+                                        </div>
                         </div>
                         {% endfor %}
                     {% endif %}
             
                     
-            </div>
+                </div>
         </div>
 </div>
 

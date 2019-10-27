@@ -5,7 +5,26 @@
 {% block title %}Log in {%endblock%}
 
 {% block content %}
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="4000" data-pause="false">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static "images/guitar.jpg" %}" class="d-block w-100" alt="im1">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static "images/korea.jpg" %}" class="d-block w-100" alt="im2">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static "images/dance.jpg" %}" class="d-block w-100" alt="im3">
+    </div>
+  </div>
+  
+</div>
+<!-- <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
           <img src="{% static "images/guitar.jpg" %}" class="d-block w-100" alt="im1">
@@ -20,7 +39,7 @@
           <img src="{% static "images/old.jpg" %}" class="d-block w-100" alt="im4">
         </div>
     </div>
-  </div>
+  </div> -->
 
    <div class="container mt-5 mb-5">
         <article>Educaton é uma plataforma voltada para o auxilio do ensino. Aqui pode-se fazer testes baseados na teoria das inteligências múltiplas e dos estilos de aprendizagem e, através deles, descobrir o seu perfil.
