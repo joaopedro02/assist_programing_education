@@ -60,7 +60,7 @@ class turma(LoginRequiredMixin,TemplateView):# mostra informações de uma turma
         mestre=False
         if c:
             mestre=True
-
+        #media das inteligencias e estilos de aprendizagem da turma
         int_verbal=0
         int_musical=0
         int_logic=0
@@ -106,8 +106,53 @@ class turma(LoginRequiredMixin,TemplateView):# mostra informações de uma turma
             e_reflexivo=e_reflexivo/cont_est
             e_pragmatico=e_pragmatico/cont_est
             e_teorico=e_teorico/cont_est
-        
-        
+        # contagem dos alunos por inteligencia, levando-se em consideração a maior inteligência
+        cont_int=0
+        cont_est=0
+        inteligencia=[]
+        inteligenciaT=[0]*8
+        estilos=[]
+        estilosT=[0]*5
+        for a in alun:
+            inteligencia.clear()
+            estilos.clear()
+            if a.perfil.f_int:
+                cont_int+=1
+                inteligencia.append(a.perfil.int_verbal_linguistica)
+                inteligencia.append(a.perfil.int_musical)
+                inteligencia.append(a.perfil.int_logico_matematica)
+                inteligencia.append(a.perfil.int_cinestesico_corporal)
+                inteligencia.append(a.perfil.int_espacial_visual)
+                inteligencia.append(a.perfil.int_intrapessoal)
+                inteligencia.append(a.perfil.int_naturalista)
+                inteligencia.append(a.perfil.int_interpessoal)
+                aux=inteligencia[0]
+                aux2=0
+                for i,n in enumerate(inteligencia) :
+                    if aux>n:
+                        aux=n
+                        aux2=i
+                inteligenciaT[aux2]+=1
+            if a.perfil.f_est:
+                cont_est+=1
+                estilos.append(a.perfil.ea_ativo)
+                estilos.append(a.perfil.ea_reflexivo)
+                estilos.append(a.perfil.ea_pragmatico)
+                estilos.append(a.perfil.ea_teorico)
+                aux=estilos[0]
+                aux2=0
+                for i,n in enumerate(estilos) :
+                    if aux>n:
+                        aux=n
+                        aux2=i
+                estilosT[aux2]+=1
+        if cont_int>0:
+            for i,n in enumerate(inteligenciaT):
+                inteligenciaT[i]=(n/cont_int)*100.0
+        if cont_est>0:
+            for i,n in enumerate(estilosT):
+                estilosT[i]=(n/cont_est)*100.0
+
         context = super(turma, self).get_context_data(*args,**kwargs)
         
         grafico_int = BarChart(
@@ -124,7 +169,7 @@ class turma(LoginRequiredMixin,TemplateView):# mostra informações de uma turma
             print_values_position='top'
             
         )
-        grafico_int.set_title('Porcentagem média de inteligências multiplas dos integrantes da turma')
+        grafico_int.set_title('Número de alunos de acordo com o tipo de inteligência predominante em porcentagem.')
 
         grafico_estilos=BarChart_estAprendizagem(
             print_zeroes=False,
@@ -141,15 +186,16 @@ class turma(LoginRequiredMixin,TemplateView):# mostra informações de uma turma
             
         )
 
-        grafico_estilos.set_title('Porcentagem média de estilos de aprendizagem dos integrantes da turma')
+        grafico_estilos.set_title('Número de alunos de acordo com o estilo de aprendizagem predominante em porcentagem.')
         # Call the `.generate()` method on our chart object
         # and pass it to template context.
         context['turma']=t[0]
         context['mestre']=mestre
         context['alunos']=alun
-        context['grafico_int'] = grafico_int.generate(int_verbal, int_musical, int_logic, int_cinestesico, int_espacial, int_intrapessoal, int_naturalista, int_interpessoal)
-        context['grafico_estilos'] = grafico_estilos.generate(e_ativo, e_reflexivo, e_pragmatico, e_teorico)
-
+        #context['grafico_int'] = grafico_int.generate(int_verbal, int_musical, int_logic, int_cinestesico, int_espacial, int_intrapessoal, int_naturalista, int_interpessoal)
+        context['grafico_int'] = grafico_int.generate(inteligenciaT[0],inteligenciaT[1],inteligenciaT[2],inteligenciaT[3],inteligenciaT[4],inteligenciaT[5],inteligenciaT[6],inteligenciaT[7])
+        #context['grafico_estilos'] = grafico_estilos.generate(e_ativo, e_reflexivo, e_pragmatico, e_teorico)
+        context['grafico_estilos'] = grafico_estilos.generate(estilosT[0],estilosT[1],estilosT[2],estilosT[3])
         
         return context
 

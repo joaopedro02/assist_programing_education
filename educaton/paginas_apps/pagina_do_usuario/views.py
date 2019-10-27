@@ -76,17 +76,17 @@ class pagina_usuario_externa(LoginRequiredMixin,TemplateView):
 
         context = super(pagina_usuario_externa, self).get_context_data(**kwargs)
         grafico_int = BarChart2(
-            print_zeroes=False,
-            height=400,
-            width=590,
-            explicit_size=True,
-            style=BlueStyle(
-                  font_family='googlefont:Roboto',
-                  value_colors=('black',)),
-            show_y_guides=False,
-            include_x_axis=False,
-            print_values=True,
-            print_values_position='top'
+            # print_zeroes=False,
+            # height=590,
+            # width=590
+            # explicit_size=True,
+            # style=BlueStyle(
+            #       font_family='googlefont:Roboto',
+            #       value_colors=('black',)),
+            # show_y_guides=False,
+            # include_x_axis=False,
+            # print_values=True,
+            # print_values_position='top'
             
         )
         grafico_int.set_title('Inteligências múltiplas')

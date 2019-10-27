@@ -1,11 +1,16 @@
 import pygal
 from django.contrib.auth.models import User
 from autentication.models import perfil 
+from pygal.style import BlueStyle
+from pygal.style import CleanStyle
+
 
 class BarChart_estAprendizagem():
 
     def __init__(self, **kwargs):
-        self.chart = pygal.Bar(**kwargs)
+        self.chart = pygal.Radar(height=400,width=400,style=BlueStyle(
+                font_family='googlefont:Roboto',
+                   value_colors=('black',)),show_legend=False,fill=True)
         
     def set_title(self,titulo):
         self.chart.title = titulo
@@ -24,8 +29,14 @@ class BarChart_estAprendizagem():
         chart_data = self.get_data(ea_ativo, ea_reflexivo, ea_pragmatico, ea_teorico)
 
         # Add data to chart
+        nomes=[]
+        valores=[]
         for key, value in chart_data.items():
-            self.chart.add(key, value)
+            valores.append(value)
+            nomes.append(key)
+            # self.chart.add(key, value)
+        self.chart.x_labels = nomes
+        self.chart.add('',valores) 
         self.chart.value_formatter = lambda x: "%.1f%%" % x
         # Return the rendered SVG
         return self.chart.render(is_unicode=True)
